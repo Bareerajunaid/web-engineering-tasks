@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Grind Cafe</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <p class="logo">The Daily Grind</p>
+
+            <nav class="main-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <button type="button" id="theme-toggle" class="theme-button">
+                Toggle Light/Dark Mode
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <h1>Welcome to The Daily Grind</h1>
+
+                    <!-- Opening Status -->
+                    <p id="opening-status"></p>
+
+                    <p>
+                        Freshly brewed coffee, delicious pastries,
+                        and a comfortable place to relax.
+                        Make every day a little better with us.
+                    </p>
+
+                    <a href="#menu" class="button">
+                        Explore Our Menu
+                    </a>
+
+                </div>
+
+                <div class="hero-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=900"
+                        alt="Warm and welcoming coffee shop interior"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- About Us Section -->
+        <section class="section" id="about">
+
+            <div class="container">
+
+                <h2>About Our Cafe</h2>
+
+                <article class="about-article">
+
+                    <p>
+                        The Daily Grind is a cozy neighborhood cafe
+                        where people come together to enjoy freshly
+                        prepared coffee and delicious food.
+                    </p>
+
+                    <p id="extra-text" hidden>
+                        We believe that good coffee and friendly
+                        service can make ordinary moments special.
+                        Our menu includes freshly brewed drinks,
+                        homemade pastries, and tasty snacks.
+                        Whether you are studying, working, or
+                        spending time with friends, we have a
+                        comfortable place waiting for you.
+                    </p>
+
+                    <button type="button" id="read-more" class="button">
+                        Read More
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Featured Items -->
+        <section class="section featured-section">
+
+            <div class="container">
+
+                <h2>Our Favorites</h2>
+
+                <div class="cards">
+
+                    <article class="card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600"
+                            alt="Freshly brewed cup of coffee"
+                        >
+
+                        <h3>Fresh Coffee</h3>
+
+                        <p>
+                            Enjoy freshly brewed coffee made
+                            with carefully selected beans.
+                        </p>
+
+                    </article>
+
+                    <article class="card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600"
+                            alt="Freshly baked croissants"
+                        >
+
+                        <h3>Fresh Pastries</h3>
+
+                        <p>
+                            Enjoy our delicious pastries,
+                            baked fresh every day.
+                        </p>
+
+                    </article>
+
+                    <article class="card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600"
+                            alt="Iced coffee served in a glass"
+                        >
+
+                        <h3>Cold Drinks</h3>
+
+                        <p>
+                            Refresh yourself with our
+                            selection of chilled drinks.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Menu Section -->
+        <section class="section" id="menu">
+
+            <div class="container">
+
+                <h2>Our Menu</h2>
+
+                <p>
+                    Choose your favorite items and calculate
+                    your order total.
+                </p>
+
+                <!-- ABC Ordered List -->
+                <div class="menu-list">
+
+                    <h3>Popular Menu Categories</h3>
+
+                    <ol type="A">
+                        <li>Freshly Brewed Coffee</li>
+                        <li>Delicious Pastries</li>
+                        <li>Cold Beverages</li>
+                    </ol>
+
+                </div>
+
+                <!-- Menu Filter Buttons -->
+                <div class="filter-buttons">
+
+                    <button type="button" class="filter-btn active"
+                        data-filter="all">
+                        All
+                    </button>
+
+                    <button type="button" class="filter-btn"
+                        data-filter="drinks">
+                        Drinks
+                    </button>
+
+                    <button type="button" class="filter-btn"
+                        data-filter="pastries">
+                        Pastries
+                    </button>
+
+                </div>
+
+                <!-- Menu Table -->
+                <div class="table-container">
+
+                    <table id="menu-table">
+
+                        <caption>Our Food and Drinks Menu</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Order</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr data-category="drinks">
+                                <td>Espresso</td>
+                                <td>Drinks</td>
+                                <td>$3</td>
+                                <td>
+                                    <input type="checkbox"
+                                        class="order-item"
+                                        value="3"
+                                        aria-label="Order Espresso">
+                                </td>
+                            </tr>
+
+                            <tr data-category="drinks">
+                                <td>Cappuccino</td>
+                                <td>Drinks</td>
+                                <td>$4</td>
+                                <td>
+                                    <input type="checkbox"
+                                        class="order-item"
+                                        value="4"
+                                        aria-label="Order Cappuccino">
+                                </td>
+                            </tr>
+
+                            <tr data-category="drinks">
+                                <td>Iced Latte</td>
+                                <td>Drinks</td>
+                                <td>$5</td>
+                                <td>
+                                    <input type="checkbox"
+                                        class="order-item"
+                                        value="5"
+                                        aria-label="Order Iced Latte">
+                                </td>
+                            </tr>
+
+                            <tr data-category="pastries">
+                                <td>Croissant</td>
+                                <td>Pastries</td>
+                                <td>$4</td>
+                                <td>
+                                    <input type="checkbox"
+                                        class="order-item"
+                                        value="4"
+                                        aria-label="Order Croissant">
+                                </td>
+                            </tr>
+
+                            <tr data-category="pastries">
+                                <td>Chocolate Muffin</td>
+                                <td>Pastries</td>
+                                <td>$3</td>
+                                <td>
+                                    <input type="checkbox"
+                                        class="order-item"
+                                        value="3"
+                                        aria-label="Order Chocolate Muffin">
+                                </td>
+                            </tr>
+
+                            <tr data-category="pastries">
+                                <td>Cheese Sandwich</td>
+                                <td>Pastries</td>
+                                <td>$6</td>
+                                <td>
+                                    <input type="checkbox"
+                                        class="order-item"
+                                        value="6"
+                                        aria-label="Order Cheese Sandwich">
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <!-- Order Total -->
+                <div class="total-box">
+
+                    <h3>Your Order</h3>
+
+                    <p id="total">Total: $0</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Contact and Feedback Form -->
+        <section class="section contact-section" id="contact">
+
+            <div class="container">
+
+                <h2>Contact and Feedback</h2>
+
+                <p>
+                    We would love to hear from you.
+                    Fill in the form below.
+                </p>
+
+                <form id="feedback-form" class="feedback-form">
+
+                    <!-- Username -->
+                    <div class="form-group">
+
+                        <label for="username">Your Name *</label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="email">Your Email *</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Birth Year -->
+                    <div class="form-group">
+
+                        <label for="birth-year">Birth Year</label>
+
+                        <input
+                            type="text"
+                            id="birth-year"
+                            name="birth-year"
+                            placeholder="Example: 2002"
+                        >
+
+                    </div>
+
+                    <!-- Radio Buttons -->
+                    <fieldset>
+
+                        <legend>How did you hear about us?</legend>
+
+                        <label class="choice">
+                            <input type="radio" name="source"
+                                value="Social Media" checked>
+                            Social Media
+                        </label>
+
+                        <label class="choice">
+                            <input type="radio" name="source"
+                                value="Friends">
+                            Friends
+                        </label>
+
+                        <label class="choice">
+                            <input type="radio" name="source"
+                                value="Other">
+                            Other
+                        </label>
+
+                    </fieldset>
+
+                    <!-- Checkboxes -->
+                    <fieldset>
+
+                        <legend>What do you like about our cafe?</legend>
+
+                        <label class="choice">
+                            <input type="checkbox" name="likes"
+                                value="Coffee">
+                            Coffee
+                        </label>
+
+                        <label class="choice">
+                            <input type="checkbox" name="likes"
+                                value="Food">
+                            Food
+                        </label>
+
+                        <label class="choice">
+                            <input type="checkbox" name="likes"
+                                value="Atmosphere">
+                            Atmosphere
+                        </label>
+
+                    </fieldset>
+
+                    <!-- Special Notes -->
+                    <div class="form-group">
+
+                        <label for="special-notes">
+                            Special Requests or Feedback
+                        </label>
+
+                        <textarea
+                            id="special-notes"
+                            name="special-notes"
+                            maxlength="100"
+                            rows="4"
+                            placeholder="Write your special instructions here..."
+                        ></textarea>
+
+                        <p id="character-count">
+                            100 characters remaining
+                        </p>
+
+                    </div>
+
+                    <button type="submit" class="button">
+                        Submit Feedback
+                    </button>
+
+                    <button type="reset" class="button reset-button">
+                        Reset
+                    </button>
+
+                    <!-- Form Confirmation Message -->
+                    <p id="form-message" class="form-message" hidden></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <p>
+                &copy; 2026 The Daily Grind Cafe.
+                All rights reserved.
+            </p>
+
+            <p>
+                <a href="#home">Back to Top</a>
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
